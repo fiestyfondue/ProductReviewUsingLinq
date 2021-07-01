@@ -32,5 +32,14 @@ namespace ReviewUsingLinq
                 Console.WriteLine("productid:-" + list.ProductId + " " + "userid:-" + list.UserId + "rating:-" + list.Rating + " " + "review:-" + list.Review + " " + "islike:-" + list.isLike);
             }
         }
+        //UC4
+        public void RetrieveCountOfRecords(List<ProductReview> reviewlist)
+        {
+            var recordedData = reviewlist.GroupBy(x => x.ProductId).Select(x => new { ProductId = x.Key, Count = x.Count() });
+            foreach(var list in recordedData)
+            {
+                Console.WriteLine(list.ProductId+"----"+list.Count);
+            }
+        }
     }
 }
