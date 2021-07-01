@@ -20,12 +20,12 @@ namespace ReviewUsingLinq
                 new ProductReview(){ProductId=6,UserId=6,Rating=6,Review="OKOk Product",isLike=true }
             };
 
-            foreach (var list in productReviewList)
-            {
-                Console.WriteLine("productid:-" + list.ProductId + " " + "userid:-" + list.UserId + "rating:-" + list.Rating + " " + "review:-" + list.Review + " " + "islike:-" + list.isLike);
-            }
-            //Management M = new Management();
-            //M.TopRecords(productReviewList);
+            //foreach (var list in productReviewList)
+            //{
+            //    Console.WriteLine("productid:-" + list.ProductId + " " + "userid:-" + list.UserId + "rating:-" + list.Rating + " " + "review:-" + list.Review + " " + "islike:-" + list.isLike);
+            //}
+            Management M = new Management();
+            M.TopRecords(productReviewList);
 
         }
     }
