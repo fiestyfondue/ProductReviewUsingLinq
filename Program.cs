@@ -9,7 +9,7 @@ namespace ReviewUsingLinq
         {
             Console.WriteLine("Welcome to product review Management system");
 
-            //UC1
+            //UC1-StoringAlltheReviewsIntoProductReviewList 
             List<ProductReview> productReviewList = new List<ProductReview>()
             {
                 new ProductReview(){ProductId=1,UserId=1,Rating=5,Review="Average Product",isLike=true },
