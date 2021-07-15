@@ -33,8 +33,10 @@ namespace ReviewUsingLinq
             //M.RetrieveCountOfRecords(productReviewList);//UC4
             //Console.WriteLine("Retrieving review by Product ID");
             //M.RetrieveProductIDAndReview(productReviewList);
-            Console.WriteLine("Skipping Top 5 records");
-            M.SkipTopFiveRecords(productReviewList);
+            //Console.WriteLine("Skipping Top 5 records");
+            //M.SkipTopFiveRecords(productReviewList);
+            Console.WriteLine("Getting Product ID and Review");
+            M.SelectProductIDAndReviews(productReviewList);
             Console.ReadLine();
             
         }

@@ -67,5 +67,15 @@ namespace ReviewUsingLinq
 
             }
         }
+        public void SelectProductIDAndReviews(List<ProductReview> listProductReview)
+        {
+            // method parameter(s) => method return value.
+            var recordedData = listProductReview.Select(x => new { x.ProductId, x.Review });
+            foreach (var list in recordedData)
+            {
+                //Output
+                Console.WriteLine("ID:" + list.ProductId + "===>" + list.Review);
+            }
+        }
     }
 }
