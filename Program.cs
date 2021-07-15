@@ -11,7 +11,7 @@ namespace ReviewUsingLinq
 
             //UC1
             List<ProductReview> productReviewList = new List<ProductReview>()
-            {
+            {//Adding Custom Class Objects in List
                 new ProductReview(){ProductId=1,UserId=1,Rating=5,Review="Average Product",isLike=true },
                 new ProductReview(){ProductId=2,UserId=2,Rating=7,Review="Good Product",isLike=true },
                 new ProductReview(){ProductId=3,UserId=3,Rating=2,Review="Bad Product",isLike=false },
@@ -23,14 +23,17 @@ namespace ReviewUsingLinq
                 new ProductReview(){ProductId=9,UserId=9,Rating=1,Review="Crap Product",isLike=false },
                 new ProductReview(){ProductId=10,UserId=10,Rating=10,Review=" Product",isLike=true }
             };
-
-            //foreach (var list in productReviewList)
-            //{
-            //    Console.WriteLine("productid:-" + list.ProductId + " " + "userid:-" + list.UserId + "rating:-" + list.Rating + " " + "review:-" + list.Review + " " + "islike:-" + list.isLike);
-            //}
+            // using foreach LINQ method for Query Exection
+            foreach (var list in productReviewList)
+            {
+                Console.WriteLine("productid:-" + list.ProductId + " " + "userid:-" + list.UserId + "rating:-" + list.Rating + " " + "review:-" + list.Review + " " + "islike:-" + list.isLike);
+            }
             Management M = new Management();
             //M.SelectRecords(productReviewList);//UC3
-            M.RetrieveCountOfRecords(productReviewList);//UC4
+            //M.RetrieveCountOfRecords(productReviewList);//UC4
+            Console.WriteLine("Retrieving review by Product ID");
+            M.RetrieveProductIDAndReview(productReviewList);
+            Console.ReadLine();
             
         }
     }

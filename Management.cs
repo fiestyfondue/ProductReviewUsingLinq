@@ -23,8 +23,9 @@ namespace ReviewUsingLinq
         public void SelectRecords(List<ProductReview> reviewlist)
         {
             var recordedData = from ProductReview in reviewlist
-                               where (ProductReview.ProductId == 1 || ProductReview.ProductId == 4 || ProductReview.ProductId == 9)
-                               && (ProductReview.Rating > 3)
+                               //where (ProductReview.ProductId == 1 || ProductReview.ProductId == 4 || ProductReview.ProductId == 9)
+                               //&& (ProductReview.Rating > 3)
+                               
                                select ProductReview;
 
             foreach(var list in recordedData)
@@ -39,6 +40,18 @@ namespace ReviewUsingLinq
             foreach(var list in recordedData)
             {
                 Console.WriteLine(list.ProductId+"----"+list.Count);
+            }
+        }
+        public void RetrieveProductIDAndReview(List<ProductReview> listProductReview)
+        {
+            
+            var recordedData = listProductReview.Select(x => new { ProductID = x.ProductId, Review = x.Review });
+            Console.WriteLine("ID with Review");
+            foreach (var list in recordedData)
+            {
+                //Output
+                Console.WriteLine("ID:" + list.ProductID + "=====>" + list.Review);
+
             }
         }
     }
