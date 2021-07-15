@@ -50,7 +50,20 @@ namespace ReviewUsingLinq
             foreach (var list in recordedData)
             {
                 //Output
-                Console.WriteLine("ID:" + list.ProductID + "=====>" + list.Review);
+                Console.WriteLine("ID:" + list.ProductID + "==>" + list.Review);
+
+            }
+        }
+        public void SkipTopFiveRecords(List<ProductReview> listProductReview)
+        {
+
+            var recordedData = (from productReviews in listProductReview
+                                select productReviews).Skip(5);
+            Console.WriteLine("Retrieving records after skipping top 5 records- ");
+            foreach (var list in recordedData)
+            {
+                Console.WriteLine("ProductID:- " + list.ProductId + " " + "UserID:- " + list.UserId
+                    + " " + "Rating:- " + list.Rating + " " + "Review:- " + list.Review + " " + "isLike:- " + list.isLike);
 
             }
         }

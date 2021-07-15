@@ -31,8 +31,10 @@ namespace ReviewUsingLinq
             Management M = new Management();
             //M.SelectRecords(productReviewList);//UC3
             //M.RetrieveCountOfRecords(productReviewList);//UC4
-            Console.WriteLine("Retrieving review by Product ID");
-            M.RetrieveProductIDAndReview(productReviewList);
+            //Console.WriteLine("Retrieving review by Product ID");
+            //M.RetrieveProductIDAndReview(productReviewList);
+            Console.WriteLine("Skipping Top 5 records");
+            M.SkipTopFiveRecords(productReviewList);
             Console.ReadLine();
             
         }
