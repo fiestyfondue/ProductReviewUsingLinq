@@ -35,8 +35,11 @@ namespace ReviewUsingLinq
             //M.RetrieveProductIDAndReview(productReviewList);
             //Console.WriteLine("Skipping Top 5 records");
             //M.SkipTopFiveRecords(productReviewList);
-            Console.WriteLine("Getting Product ID and Review");
-            M.SelectProductIDAndReviews(productReviewList);
+            //Console.WriteLine("Getting Product ID and Review");
+            //M.SelectProductIDAndReviews(productReviewList);
+            Console.WriteLine("UC7- Create DataTable .");
+            DataTableOP dataTableOperations = new DataTableOP();
+            dataTableOperations.CreateDataTable();
             Console.ReadLine();
             
         }

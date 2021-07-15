@@ -8,7 +8,7 @@ namespace ReviewUsingLinq
 {
     class Management
     {
-        public readonly DataTable dataTable = new DataTable();
+        public readonly DataTableOP dataTable = new DataTableOP();
         //UC2
         public void TopRecords(List<ProductReview> review)
         {
